@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/add-stock', [ApiController::class, 'addStock']);
 Route::get('/get-stocks', [ApiController::class, 'getStocks']);
+Route::post('/add-salesman', [ApiController::class, 'addSalesMan']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

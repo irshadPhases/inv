@@ -2,26 +2,16 @@
 namespace App\services;
 
 use App\Models\Stock;
-use Log;
 
 class StockServices
 {
-    function insertStock($data)
+    function insert($data)
     {
-        try {
-            Stock::create($data);
-        } catch (\Throwable $th) {
-            Log::error($th);
-        }
+        Stock::create($data);
     }
 
-    function getStocks()
+    function get()
     {
-        try {
-            return Stock::where('status', 1)->get()->toArray();
-        } catch (\Throwable $th) {
-            Log::error($th);
-        }
-
+        return Stock::get()->toArray();
     }
 }

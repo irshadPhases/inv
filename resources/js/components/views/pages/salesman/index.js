@@ -1,11 +1,11 @@
 import { CButton } from "@coreui/react";
 import { useEffect, useState } from "react";
 import StockTable from "./table";
-import StockForm from "./form";
+import SalesManForm from "./form";
 
 const SalesMan = () => {
     const [showStockForm, setShowStockForm] = useState(false);
-    const [stockFormType, setStockFormType] = useState("Add form");
+    const [formType, setFormType] = useState("Add form");
     const [buttonText, setButtonText] = useState("");
     const handleShowButton = () => {
         if (showStockForm) {
@@ -58,9 +58,7 @@ const SalesMan = () => {
             </div>
             {!showStockForm && <StockTable data={tableExample} />}
 
-            {showStockForm && (
-                <StockForm data={tableExample} type={stockFormType} />
-            )}
+            {showStockForm && <SalesManForm type={formType} />}
         </>
     );
 };

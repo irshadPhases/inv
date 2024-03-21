@@ -11,28 +11,43 @@ import {
     CCardHeader,
     CCardBody,
     CAlert,
+    COption,
+    CFormSelect,
 } from "@coreui/react";
-const StockForm = ({ type }) => {
+import { PostReq } from "../../../request/services";
+const SalesManForm = ({ type }) => {
     const [validated, setValidated] = useState(false);
+    const [alert, setAlert] = useState({
+        msg: "",
+        type: "",
+    });
     const [formData, setFormData] = useState({
-        itemName: "",
-        model: "",
-        brand: "",
-        quantity: "",
+        name: "",
+        email: "",
+        phone: "",
+        status: "active", // Default status
     });
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
     };
-    const handleSubmit = (event) => {
+    const resetForm = () => {
+        setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            status: "active",
+        });
+    };
+    const handleSubmit = async(event) => {
+        event.preventDefault();
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
-            event.preventDefault();
             event.stopPropagation();
-        } else {
-            console.log(formData);
+            setValidated(true);
+            return;
         }
-        setValidated(true);
+        let res = await PostReq("add-salesman", formData);
     };
     return (
         <CRow>
@@ -48,76 +63,75 @@ const StockForm = ({ type }) => {
                             validated={validated}
                             onSubmit={handleSubmit}
                         >
-                            {/* Add similar fields for username, city, state, and zip */}
                             <CCol md={6}>
-                                <CFormLabel htmlFor="validationCustom05">
-                                    Item Name
+                                <CFormLabel htmlFor="validationCustom01">
+                                    Name
                                 </CFormLabel>
                                 <CFormInput
                                     type="text"
-                                    id="validationCustom05"
-                                    name="itemName"
-                                    value={formData.itemName}
+                                    id="validationCustom01"
+                                    name="name"
+                                    value={formData.name}
                                     onChange={handleChange}
                                     required
                                 />
-
                                 <CFormFeedback invalid>
-                                    Please enter item name
+                                    Please enter name
                                 </CFormFeedback>
                             </CCol>
                             <CCol md={6}>
-                                <CFormLabel htmlFor="validationCustom07">
-                                    Model / Year
+                                <CFormLabel htmlFor="validationCustom02">
+                                    Email
                                 </CFormLabel>
                                 <CFormInput
-                                    type="text"
-                                    id="validationCustom07"
-                                    name="model"
-                                    value={formData.model}
+                                    type="email"
+                                    id="validationCustom02"
+                                    name="email"
+                                    value={formData.email}
                                     onChange={handleChange}
                                     required
                                 />
-
                                 <CFormFeedback invalid>
-                                    Please enter model
+                                    Please enter valid email
                                 </CFormFeedback>
                             </CCol>
                             <CCol md={6}>
-                                <CFormLabel htmlFor="validationCustom08">
-                                    Brand
+                                <CFormLabel htmlFor="validationCustom03">
+                                    Phone
                                 </CFormLabel>
                                 <CFormInput
-                                    type="text"
-                                    id="validationCustom08"
-                                    name="brand"
-                                    value={formData.brand}
+                                    type="tel"
+                                    id="validationCustom03"
+                                    name="phone"
+                                    value={formData.phone}
                                     onChange={handleChange}
                                     required
                                 />
-
                                 <CFormFeedback invalid>
-                                    Please enter brand
+                                    Please enter phone number
                                 </CFormFeedback>
                             </CCol>
                             <CCol md={6}>
-                                <CFormLabel htmlFor="validationCustom09">
-                                    Quantity
+                                <CFormLabel htmlFor="validationCustom04">
+                                    Status
                                 </CFormLabel>
-                                <CFormInput
-                                    type="number"
-                                    id="validationCustom09"
-                                    name="quantity"
-                                    value={formData.quantity}
+                                <CFormSelect
+                                    id="validationCustom04"
+                                    name="status"
+                                    value={formData.status}
                                     onChange={handleChange}
                                     required
-                                />
-
+                                >
+                                    <option value={1}>Active</option>
+                                    <option value={0}>Inactive</option>
+                                </CFormSelect>
                                 <CFormFeedback invalid>
-                                    Please enter quantity
+                                    Please select status
                                 </CFormFeedback>
                             </CCol>
-                            <CAlert color="success">A simple success alert—check it out!</CAlert>
+                            {alert.msg != "" && (
+                                <CAlert color={alert.type}>{alert.msg}</CAlert>
+                            )}
                             <CCol xs={12}>
                                 <CButton type="submit" color="primary">
                                     Save
@@ -130,4 +144,4 @@ const StockForm = ({ type }) => {
         </CRow>
     );
 };
-export default StockForm;
+export default SalesManForm;
