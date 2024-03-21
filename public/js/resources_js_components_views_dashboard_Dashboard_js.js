@@ -8527,16 +8527,16 @@ var WidgetsDropdown = function WidgetsDropdown(props) {
   var widgetChartRef1 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
   var widgetChartRef2 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    document.documentElement.addEventListener('ColorSchemeChange', function () {
+    document.documentElement.addEventListener("ColorSchemeChange", function () {
       if (widgetChartRef1.current) {
         setTimeout(function () {
-          widgetChartRef1.current.data.datasets[0].pointBackgroundColor = (0,_coreui_utils__WEBPACK_IMPORTED_MODULE_4__["default"])('--cui-primary');
+          widgetChartRef1.current.data.datasets[0].pointBackgroundColor = (0,_coreui_utils__WEBPACK_IMPORTED_MODULE_4__["default"])("--cui-primary");
           widgetChartRef1.current.update();
         });
       }
       if (widgetChartRef2.current) {
         setTimeout(function () {
-          widgetChartRef2.current.data.datasets[0].pointBackgroundColor = (0,_coreui_utils__WEBPACK_IMPORTED_MODULE_4__["default"])('--cui-info');
+          widgetChartRef2.current.data.datasets[0].pointBackgroundColor = (0,_coreui_utils__WEBPACK_IMPORTED_MODULE_4__["default"])("--cui-info");
           widgetChartRef2.current.update();
         });
       }
@@ -8554,7 +8554,7 @@ var WidgetsDropdown = function WidgetsDropdown(props) {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_coreui_react__WEBPACK_IMPORTED_MODULE_7__.CWidgetStatsA, {
         color: "primary",
         value: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
-          children: ["26K", ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
+          children: ["26K", " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
             className: "fs-6 fw-normal",
             children: ["(-12.4% ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_coreui_icons_react__WEBPACK_IMPORTED_MODULE_2__["default"], {
               icon: _coreui_icons__WEBPACK_IMPORTED_MODULE_8__.cilArrowBottom
@@ -8588,15 +8588,15 @@ var WidgetsDropdown = function WidgetsDropdown(props) {
           ref: widgetChartRef1,
           className: "mt-3 mx-3",
           style: {
-            height: '70px'
+            height: "70px"
           },
           data: {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            labels: ["January", "February", "March", "April", "May", "June", "July"],
             datasets: [{
-              label: 'My First dataset',
-              backgroundColor: 'transparent',
-              borderColor: 'rgba(255,255,255,.55)',
-              pointBackgroundColor: (0,_coreui_utils__WEBPACK_IMPORTED_MODULE_4__["default"])('--cui-primary'),
+              label: "My First dataset",
+              backgroundColor: "transparent",
+              borderColor: "rgba(255,255,255,.55)",
+              pointBackgroundColor: (0,_coreui_utils__WEBPACK_IMPORTED_MODULE_4__["default"])("--cui-primary"),
               data: [65, 59, 84, 84, 51, 55, 40]
             }]
           },
@@ -8653,7 +8653,7 @@ var WidgetsDropdown = function WidgetsDropdown(props) {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_coreui_react__WEBPACK_IMPORTED_MODULE_7__.CWidgetStatsA, {
         color: "info",
         value: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
-          children: ["$6.200", ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
+          children: ["$6.200", " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
             className: "fs-6 fw-normal",
             children: ["(40.9% ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_coreui_icons_react__WEBPACK_IMPORTED_MODULE_2__["default"], {
               icon: _coreui_icons__WEBPACK_IMPORTED_MODULE_14__.cilArrowTop
@@ -8687,15 +8687,15 @@ var WidgetsDropdown = function WidgetsDropdown(props) {
           ref: widgetChartRef2,
           className: "mt-3 mx-3",
           style: {
-            height: '70px'
+            height: "70px"
           },
           data: {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            labels: ["January", "February", "March", "April", "May", "June", "July"],
             datasets: [{
-              label: 'My First dataset',
-              backgroundColor: 'transparent',
-              borderColor: 'rgba(255,255,255,.55)',
-              pointBackgroundColor: (0,_coreui_utils__WEBPACK_IMPORTED_MODULE_4__["default"])('--cui-info'),
+              label: "My First dataset",
+              backgroundColor: "transparent",
+              borderColor: "rgba(255,255,255,.55)",
+              pointBackgroundColor: (0,_coreui_utils__WEBPACK_IMPORTED_MODULE_4__["default"])("--cui-info"),
               data: [1, 18, 9, 17, 34, 22, 11]
             }]
           },
@@ -8751,7 +8751,7 @@ var WidgetsDropdown = function WidgetsDropdown(props) {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_coreui_react__WEBPACK_IMPORTED_MODULE_7__.CWidgetStatsA, {
         color: "warning",
         value: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
-          children: ["2.49%", ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
+          children: ["2.49%", " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
             className: "fs-6 fw-normal",
             children: ["(84.7% ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_coreui_icons_react__WEBPACK_IMPORTED_MODULE_2__["default"], {
               icon: _coreui_icons__WEBPACK_IMPORTED_MODULE_14__.cilArrowTop
@@ -8784,14 +8784,14 @@ var WidgetsDropdown = function WidgetsDropdown(props) {
         chart: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_coreui_react_chartjs__WEBPACK_IMPORTED_MODULE_1__.CChartLine, {
           className: "mt-3",
           style: {
-            height: '70px'
+            height: "70px"
           },
           data: {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            labels: ["January", "February", "March", "April", "May", "June", "July"],
             datasets: [{
-              label: 'My First dataset',
-              backgroundColor: 'rgba(255,255,255,.2)',
-              borderColor: 'rgba(255,255,255,.55)',
+              label: "My First dataset",
+              backgroundColor: "rgba(255,255,255,.2)",
+              borderColor: "rgba(255,255,255,.55)",
               data: [78, 81, 80, 45, 34, 12, 40],
               fill: true
             }]
@@ -8832,7 +8832,7 @@ var WidgetsDropdown = function WidgetsDropdown(props) {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_coreui_react__WEBPACK_IMPORTED_MODULE_7__.CWidgetStatsA, {
         color: "danger",
         value: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
-          children: ["44K", ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
+          children: ["44K", " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
             className: "fs-6 fw-normal",
             children: ["(-23.6% ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_coreui_icons_react__WEBPACK_IMPORTED_MODULE_2__["default"], {
               icon: _coreui_icons__WEBPACK_IMPORTED_MODULE_8__.cilArrowBottom
@@ -8865,14 +8865,14 @@ var WidgetsDropdown = function WidgetsDropdown(props) {
         chart: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_coreui_react_chartjs__WEBPACK_IMPORTED_MODULE_1__.CChartBar, {
           className: "mt-3 mx-3",
           style: {
-            height: '70px'
+            height: "70px"
           },
           data: {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December', 'January', 'February', 'March', 'April'],
+            labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", "January", "February", "March", "April"],
             datasets: [{
-              label: 'My First dataset',
-              backgroundColor: 'rgba(255,255,255,.2)',
-              borderColor: 'rgba(255,255,255,.55)',
+              label: "My First dataset",
+              backgroundColor: "rgba(255,255,255,.2)",
+              borderColor: "rgba(255,255,255,.55)",
               data: [78, 81, 80, 45, 34, 12, 40, 85, 65, 23, 12, 98, 34, 84, 67, 82],
               barPercentage: 0.6
             }]
